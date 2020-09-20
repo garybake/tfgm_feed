@@ -18,3 +18,17 @@ Set initial config files
 
 **Listen for messages**  
 `bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic metrolink --from-beginning`
+
+Setup Spark (local cluster)
+-------------------
+**Start the master**  
+`./sbin/start-master.sh`
+
+**Add a worker**  
+`./sbin/start-slave.sh $(hostname):7077`
+
+**View the webui**  
+http://localhost:8080/ 
+
+**PySpark shell**  
+`./bin/pyspark --master spark://$(hostname):7077`
