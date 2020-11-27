@@ -27,6 +27,10 @@ Setup Spark (local cluster)
 **Add a worker**  
 `./sbin/start-slave.sh $(hostname):7077`
 
+**Windows**
+`bin\spark-class org.apache.spark.deploy.master.Master`  
+`bin\spark-class org.apache.spark.deploy.worker.Worker spark://hostname:port`
+
 **View the webui**  
 http://localhost:8080/ 
 
